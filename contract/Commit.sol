@@ -32,6 +32,7 @@ contract Commit {
     event CommitmentEvaluated(uint256 id, address[] participants, bool success);
     event Withdrawal(address indexed user, uint256 amount);
     event TokenAddressUpdated(address newTokenAddress);
+    event RewardDistributed(uint256 id);
 
     constructor(IERC20 _stakeToken) {
         stakeToken = _stakeToken;
@@ -113,6 +114,7 @@ contract Commit {
         balances[_id][address(this)] -= totalStake;
 
         commitment.isPaid = true;
+        emit RewardDistributed(_id);
     }
 
     // Function to withdraw USDC rewards
