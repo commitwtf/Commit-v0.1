@@ -39,7 +39,7 @@ const CommitPage = () => {
 
   const usdcContractAddress = "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913";
   const commitContractAddress = "0xc8aF01aaa367A6718d5bA0F9Fa24112564e2e722";
-  const amountToApprove = Web3.utils.toWei("10", "mwei"); // USDC has 6 decimals
+  const amountToApprove = Web3.utils.toWei("3", "mwei"); // USDC has 6 decimals
 
   useEffect(() => {
     if (window.ethereum) {
@@ -64,7 +64,7 @@ const CommitPage = () => {
         await usdcContract.methods.approve(commitContractAddress, amountToApprove).send({ from: userAccount });
 
         // Join commitment
-        await commitContract.methods.joinCommitment(0).send({ from: userAccount });
+        await commitContract.methods.joinCommitment(1).send({ from: userAccount });
 
         console.log("Successfully joined the commitment!");
       } catch (error) {
@@ -107,7 +107,7 @@ const CommitPage = () => {
 
       <div className="w-full max-w-md p-4 mb-2 bg-gray-800 rounded-lg backdrop-blur-md">
         <strong className="text-white">Stake</strong>
-        <p className="text-gray-300">10 USDC</p>
+        <p className="text-gray-300">3 USDC</p>
       </div>
 
       <div className="w-full max-w-md p-4 mb-2 bg-gray-800 rounded-lg backdrop-blur-md">
