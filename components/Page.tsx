@@ -14,16 +14,7 @@ const Navbar = () => {
     <nav className="flex justify-center items-center w-full fixed z-[6] backdrop-blur-sm py-3">
       <div className="flex justify-between items-center w-full max-w-screen-lg mx-auto px-4">
         <a href="#" className="flex justify-start items-center flex-shrink-0 cursor-pointer">
-          <div className="relative w-14 h-14">
-            <Image 
-              src="https://i.imgur.com/G6Dx8nu.png" 
-              alt="logo" 
-              layout="fill" 
-              objectFit="cover"
-              className="rounded-full"
-            />
-          </div>
-          <h1 className="hidden sm:block font-normal font-poppins text-[24px] text-white leading-loose px-2 mt-2">
+          <h1 className="font-normal font-poppins text-[24px] text-white leading-loose px-2 mt-2">
             Commit
           </h1>
         </a>
@@ -101,7 +92,7 @@ const CommitPage = () => {
             height={24} 
             className="inline-block rounded-full mx-1 align-middle"
           /> 
-          <a href="https://warpcast.com/rev">@rev</a>
+          <a href="https://warpcast.com/rev" target="_blank" rel="noopener noreferrer">@rev</a>
         </p>
       </div>
             {/* Commit Details */}
@@ -122,7 +113,7 @@ const CommitPage = () => {
       <div className="w-full max-w-md p-4 mb-2 bg-gray-800 rounded-lg backdrop-blur-md">
         <strong className="text-white">Details</strong>
         <p className="text-gray-300">
-          Donate to any project developed during the <a href="https://www.fundingthecommons.io/residencies" className="underline">FtC Residency</a> in Chiang Mai by the end of the year.
+          Donate to any project developed during the <a href="https://www.fundingthecommons.io/residencies" target="_blank" rel="noopener noreferrer" className="underline">FtC Residency</a> in Chiang Mai by the end of the year.
         </p>
         <p className="text-gray-300">Donations can be of any amount.</p>
         <p className="text-gray-300">You can submit the proofs of supporting in the telegram group.</p>
@@ -142,6 +133,14 @@ const CommitPage = () => {
           {message}
         </div>
       )}
+      <div className="flex justify-center space-x-4 mt-4">
+        <a href="https://t.me/+e0yHv2tdDG40ZTZi" target="_blank" rel="noopener noreferrer">
+          <Image src="/telegram.png" alt="Telegram" width={30} height={30} />
+        </a>
+        <a href="https://warpcast.com/~/channel/commit" target="_blank" rel="noopener noreferrer">
+          <Image src="/farcaster.svg" alt="Farcaster" width={30} height={30} />
+        </a>
+      </div>
     </div>
   );
 };
