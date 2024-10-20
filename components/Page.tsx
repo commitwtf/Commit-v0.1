@@ -64,7 +64,7 @@ const CommitPage = () => {
         await usdcContract.methods.approve(commitContractAddress, amountToApprove).send({ from: userAccount });
 
         // Join commitment
-        await commitContract.methods.joinCommitment(/* arguments you need to pass */).send({ from: userAccount });
+        await commitContract.methods.joinCommitment(0).send({ from: userAccount });
 
         console.log("Successfully joined the commitment!");
       } catch (error) {
