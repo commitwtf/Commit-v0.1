@@ -115,18 +115,18 @@ const CommitPage = () => {
         <p className="text-gray-400">
           Commit Creator:
           <Image
-            src="https://wrpcd.net/cdn-cgi/imagedelivery/BXluQx4ige9GuW0Ia56BHw/932d36bd-3feb-4037-6219-e53664444600/anim=false,fit=contain,f=auto,w=288"
+            src="https://pbs.twimg.com/profile_images/1475184333329768450/vN6horsl_400x400.jpg"
             alt="creator"
             width={24}
             height={24}
             className="inline-block rounded-full mx-1 align-middle"
           />
           <a
-            href="https://warpcast.com/rev"
+            href="https://x.com/iamnotstatic"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @abdul
+            @iamnotstatic
           </a>
         </p>
       </div>
